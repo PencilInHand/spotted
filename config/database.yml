@@ -15,8 +15,8 @@ test:
   username: davidyurek
   password:
 
-production:
-  <<: *default
-  database: spotted_production
-  username: spotted
-  password: <%= ENV['SPOTTED_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: spotted_production
+#   username: spotted
+#   password: <%= ENV['SPOTTED_DATABASE_PASSWORD'] %>
