@@ -13,6 +13,9 @@ gem 'sass-rails', '~> 5.0'
 # Bootstrap Sass
 gem 'bootstrap-sass', '~> 3.3.3'
 
+# Font Awesome
+gem 'font-awesome-rails', '~> 4.3.0.0'
+
 # Haml
 gem 'haml', '~> 4.0.6'
 gem 'haml-rails', '~> 0.8.2'
