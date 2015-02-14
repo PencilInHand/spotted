@@ -1,0 +1,2 @@
+class PerformanceModification < Modification
+end
