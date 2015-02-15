@@ -7,4 +7,15 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    .container-fluid
+      .navbar
+        .navbar-header
+          .navbar-brand Spotted
+          .nav.pull-right
+            .navbar-text
+              = link_to 'About', '#'
+            .navbar-text
+              = link_to 'Search', '#'
+            .navbar-text
+              = link_to 'Random', '#'
+      = yield
