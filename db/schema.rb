@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150214135622) do
+ActiveRecord::Schema.define(version: 20150216062125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,26 @@ ActiveRecord::Schema.define(version: 20150214135622) do
     t.string   "section"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "vehicle_id"
   end
+
+  add_index "modifications", ["vehicle_id"], name: "index_modifications_on_vehicle_id", using: :btree
+
+  create_table "time_cards", force: :cascade do |t|
+    t.time     "reaction_time"
+    t.time     "sixty_foot_time"
+    t.time     "three_thirty_foot_time"
+    t.time     "eighth_mile_time"
+    t.string   "eighth_mile_speed"
+    t.time     "thousand_foot_time"
+    t.time     "fourth_mile_time"
+    t.string   "fourth_mile_speed"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "vehicle_id"
+  end
+
+  add_index "time_cards", ["vehicle_id"], name: "index_time_cards_on_vehicle_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
