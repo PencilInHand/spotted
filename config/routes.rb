@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
 
-  resources :vehicles
-
-  resources :users
+  resources :users do
+    resources :vehicles
+  end
 end
