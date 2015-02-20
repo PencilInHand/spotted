@@ -10,14 +10,16 @@
     .header
       .navbar
         .navbar-header
-          .navbar-brand Spotted
-          .nav.pull-right
-            .navbar-text
-              = link_to 'About', '#'
-            .navbar-text
-              = link_to 'Search', '#'
-            .navbar-text
-              = link_to 'Random', '#'
+          .navbar-brand.pull-left Spotted
+          %ul.nav.navbar-nav.hidden-xs.pull-right
+            %li= link_to 'About', '#'
+            %li= link_to 'Search', '#'
+            %li= link_to 'Random', '#'
+          %button.navbar-toggle.dropdown-toggle.fa.fa-bars.hidden-sm.hidden-md.hidden-lg{data: {target: '#mobile-header-nav', toggle: 'dropdown'}}
+          %ul.dropdown-menu.pull-right
+            %li= link_to 'About', '#'
+            %li= link_to 'Search', '#'
+            %li= link_to 'Random', '#'
     .content
       = yield
     .footer
