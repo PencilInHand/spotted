@@ -29,6 +29,7 @@
             / - else
             %li= link_to 'Sign In', '#'
     .content
+      - render partial: 'layouts/notifications'
       = yield
     .footer
       .navbar
@@ -39,4 +40,3 @@
           .nav.pull-right
             .navbar-text
               Other links
-

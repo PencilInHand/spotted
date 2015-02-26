@@ -1,0 +1,14 @@
+- warning = flash[:warning]
+.notifications-container.text-center.collapse{class: warning.present? || notice.present? || alert.present? ? 'in' : ''}
+  - if warning.present?
+    .alert.alert-danger
+      .close{data: {dismiss: 'alert'}} &times;
+      = warning
+  - if alert.present?
+    .alert.alert-warning
+      .close{data: {dismiss: 'alert'}} &times;
+      = alert
+  - if notice.present?
+    .alert.alert-success
+      .close{data: {dismiss: 'alert'}} &times;
+      = notice
