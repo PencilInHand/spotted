@@ -15,19 +15,19 @@
             %li= link_to 'About', '#'
             %li= link_to 'Search', '#'
             - if user_signed_in?
-              %li= link_to 'Log Out', '#'
+              %li= link_to 'Log Out', destroy_user_session
             - else
-              %li= link_to 'Log In', '#'
-              %li= link_to 'Register', '#'
+              %li= link_to 'Log In', new_user_session
+              %li= link_to 'Register', new_user_registration
           %button.navbar-toggle.dropdown-toggle.fa.fa-bars.hidden-sm.hidden-md.hidden-lg{data: {target: '#mobile-header-nav', toggle: 'dropdown'}}
           %ul.dropdown-menu.pull-right
             %li= link_to 'About', '#'
             %li= link_to 'Search', '#'
             - if user_signed_in?
-              %li= link_to 'Sign Out', '#'
+              %li= link_to 'Sign Out', destroy_user_session
             - else
-              %li= link_to 'Sign In', '#'
-              %li= link_to 'Register', '#'
+              %li= link_to 'Sign In', new_user_session
+              %li= link_to 'Register', new_user_registration
     .content
       = render partial: 'layouts/notifications'
       = yield
