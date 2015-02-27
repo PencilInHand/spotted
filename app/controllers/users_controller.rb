@@ -13,6 +13,11 @@ class UsersController < ApplicationController
   def show
   end
 
+  # GET /users/me
+  def me
+    redirect_to current_user
+  end
+
   # GET /users/new
   def new
     @user = User.new
