@@ -7,5 +7,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = render partial: 'layouts/notifications'
-    = yield
+    .side-bar
+      Some text.
+    .page-wrapper
+      %button.btn.btn-default
+        %i.fa.fa-bars
+      = render partial: 'layouts/notifications'
+      = yield

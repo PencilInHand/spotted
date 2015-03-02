@@ -1,0 +1,29 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+.side-bar {
+  left: -300px;
+  width: 300px;
+  position: fixed;
+  height: 100%;
+}
+
+.page-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 30px;
+}
+
+button .btn .btn-default {
+  border: none;
+}
