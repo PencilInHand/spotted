@@ -1,42 +1,6 @@
 !!!
 %html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Spotted
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
   %body
-    .header
-      .navbar
-        .navbar-header
-          .navbar-brand.pull-left Spotted
-          %ul.nav.navbar-nav.hidden-xs.pull-right
-            %li= link_to 'About', '#'
-            %li= link_to 'Search', '#'
-            - if user_signed_in?
-              %li= link_to 'Log Out', destroy_user_session_path
-            - else
-              %li= link_to 'Log In', new_user_session_path
-              %li= link_to 'Register', new_user_registration_path
-          %button.navbar-toggle.dropdown-toggle.fa.fa-bars.hidden-sm.hidden-md.hidden-lg{data: {target: '#mobile-header-nav', toggle: 'dropdown'}}
-          %ul.dropdown-menu.pull-right
-            %li= link_to 'About', '#'
-            %li= link_to 'Search', '#'
-            - if user_signed_in?
-              %li= link_to 'Sign Out', destroy_user_session_path
-            - else
-              %li= link_to 'Sign In', new_user_session_path
-              %li= link_to 'Register', new_user_registration_path
-    .content
-      = render partial: 'layouts/notifications'
-      = yield
-    .footer
-      .navbar
-        .navbar-header
-          .nav.pull-left
-            .navbar-text
-              Copyright 2015
-          .nav.pull-right
-            .navbar-text
-              Other links
+    = render partial: 'layouts/notifications'
+    = yield
+  
