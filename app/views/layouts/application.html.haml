@@ -9,8 +9,8 @@
   %body
     .side-bar
       Some text.
+    .circle.btn.btn-default#side-bar-toggle
+      %i.fa.fa-bars
     .page-wrapper
-      .circle.btn.btn-default#side-bar-toggle
-        %i.fa.fa-bars
       = render partial: 'layouts/notifications'
       = yield
