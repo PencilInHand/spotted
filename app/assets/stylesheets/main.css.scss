@@ -17,21 +17,18 @@ body {
 }
 
 .page-wrapper {
-  background-image: url('head-light.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   padding: 30px;
+  background-image: url('head-light.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .circle {
+  position: absolute;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -44,4 +41,5 @@ body {
   height: 50px;
   border-radius: 50%;
   border: 1px solid rgba(51, 51, 51, 1);
+  z-index: 1000;
 }
