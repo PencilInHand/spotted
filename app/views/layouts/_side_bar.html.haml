@@ -1,0 +1,21 @@
+.side-bar
+  - if user_signed_in?
+    - if content_for?(:side_bar)
+      = yield :side_bar
+  - else
+    .h2 Log In
+    = form_for(:user, url: session_path(:user)) do |f|
+      .field
+        = f.label :email
+        %br/
+        = f.email_field :email, autofocus: true
+      .field
+        = f.label :password
+        %br/
+        = f.password_field :password, autocomplete: "off"
+        - if Devise.mappings[:user].rememberable?
+          .field
+            = f.check_box :remember_me
+            = f.label :remember_me
+      .actions
+        = f.submit "Log in"
