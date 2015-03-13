@@ -12,4 +12,18 @@ $(document).ready(function() {
 			$('.side-bar').animate({'left': '-200px'}, 200);
 		}
 	});
+
+	$('.side-bar-register-button').click(function() {
+		if ($('.side-bar-register-button').text() === 'Register') {
+			$('.side-bar-register-button').text('Sign Up');
+			$('.register-question').text('Already a member?');
+			$('.side-bar-sign-in').animate({'height': '0px'}, 200);
+			$('.side-bar-register').animate({'height': '100%'}, 200);
+		} else {
+			$('.side-bar-register-button').text('Register')
+			$('.register-question').text('Not a member yet?');
+			$('.side-bar-sign-in').animate({'height': '100%'}, 200);
+			$('.side-bar-register').animate({'height': '0px'}, 200);
+		}
+	});
 });
