@@ -10,6 +10,7 @@ html {
 body {
   width: 100%;
   min-height: 100%;
+  font-family: 'OpenSans-Light', sans-serif;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -18,7 +19,7 @@ body {
   left: -200px;
   width: 200px;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
   color: rgba(255, 255, 255, 1);
   background-color: $gray-base;
   z-index: 1000;
@@ -27,6 +28,20 @@ body {
     input {
       color: $gray-base;
     }
+  }
+
+  .side-bar-sign-in {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .side-bar-register {
+    overflow: hidden;
+    height: 0px;
+  }
+
+  .side-bar-wrapper {
+    height: 50%;
   }
 }
 
@@ -37,10 +52,6 @@ body {
   padding-top: 20px;
   padding-left: 100px;
   padding-right: 100px;
-
-  .h1 {
-    font-family: sans-serif;
-  }
 }
 
 .circle {
@@ -64,4 +75,8 @@ body {
     width: 40px;
     height: 40px;
   }
+}
+
+.field {
+  padding-bottom: 5px;
 }
