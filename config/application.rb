@@ -25,5 +25,8 @@ module Spotted
 
     # Load one deep subfolders in the models directory.
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**/}')]
+
+    # Serving static assets for deployment.
+    config.serve_static_assets = true
   end
 end
