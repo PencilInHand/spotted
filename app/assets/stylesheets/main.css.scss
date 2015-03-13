@@ -16,12 +16,13 @@ body {
 
 .side-bar {
   position: fixed;
-  left: -200px;
+  left: -300px;
   width: 200px;
   height: 100%;
   padding: 20px;
   color: rgba(255, 255, 255, 1);
   background-color: $gray-base;
+  box-shadow: 10px 10px 5px #888888;
   z-index: 1000;
 
   form {
