@@ -7,8 +7,9 @@ gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# Use SCSS for stylesheets
+# Use SCSS and Compass for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'compass-rails', '~> 2.0.4'
 
 # Bootstrap Sass
 gem 'bootstrap-sass', '~> 3.3.3'
