@@ -2,18 +2,11 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Spotted
+    %title Spot My Car
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     = render partial: 'layouts/side_bar'
-    .circle.btn#side-bar-toggle
-      %i.fa.fa-bars
-    .page-wrapper
-      .navbar
-        .h1.pull-right.visible-lg Spot My Car
-        .h2.pull-right.visible-md Spot My Car
-        .h3.pull-right.visible-xs.visible-sm Spot My Car
-      = render partial: 'layouts/notifications'
-      = yield
+    = render partial: 'layouts/notifications'
+    = yield
