@@ -1,17 +1,37 @@
 html, body {
   width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 body {
-  padding: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
   font-family: 'OpenSans-Light', sans-serif;
+  font-size: 6em;
   background-image: image_url('head-light.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
+.page-wrapper {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}
+
 .header {
-  font-size: 6em;
+  height: auto;
+}
+
+.side-bar {
+  position: fixed;
+  right: -50%;
+  height: 100%;
+  width: 50%;
+  padding: 2%;
+  background-color: $dark-gray;
+  z-index: 1000;
+  color: white;
 }
