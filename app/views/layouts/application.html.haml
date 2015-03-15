@@ -7,6 +7,16 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .header
+      .col-xs-10
+        - if content_for?(:title)
+          = yield(:title)
+        - else
+          Spot My Car
+      .col-xs-2
+        %button.btn.fa.fa-bars
+    .content
     = render partial: 'layouts/side_bar'
     = render partial: 'layouts/notifications'
     = yield
+    .footer
