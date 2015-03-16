@@ -1,83 +1,83 @@
-html {
-  width: 100%;
-  height: 100%;
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 6em;
   background-image: image_url('head-light.jpg');
-  background-position: right;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-body {
-  width: 100%;
-  min-height: 100%;
-  font-family: 'OpenSans-Light', sans-serif;
-  background-color: rgba(255, 255, 255, .2);
+.page-wrapper {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.header {
+  height: auto;
+  font-size: 120%;
 }
 
 .side-bar {
   position: fixed;
-  left: -300px;
-  width: 200px;
+  right: -600px;
   height: 100%;
-  padding: 20px;
-  color: rgba(255, 255, 255, 1);
-  background-color: $gray-base;
-  box-shadow: 10px 10px 5px rgba(51, 51, 51, .5);
+  width: 500px;
+  padding-left: 2%;
+  background-color: $dark-gray;
   z-index: 1000;
+  color: white;
+  font-size: 80%;
+  box-shadow: -10px -10px 5px rgba(0, 0, 0, .1);
 
-  form {
-    input {
-      color: $gray-base;
-    }
+  .btn, .btn-default {
+    font-size: inherit;
   }
 
-  .side-bar-sign-in {
-    height: auto;
+  .side-bar-wrapper {
+    width: 100%;
+  }
+
+  .form-title {
+    font-size: 125%;
+  }
+
+  input {
+    color: $dark-gray;
+    width: 90%;
+  }
+
+  input.checkbox {
+    width: .8em;
+    height: .8em;
+  }
+
+  label {
+    font-weight: inherit;
+    font-size: 70%;
+  }
+
+  .actions {
+    margin-top: 5px;
+  }
+
+  .side-bar-log-in, .side-bar-register {
     overflow: hidden;
   }
 
   .side-bar-register {
-    overflow: hidden;
     height: 0px;
   }
 
-  .side-bar-wrapper {
-    height: 50%;
+  #log-in-register-swap {
+    font-size: 80%;
   }
-}
-
-.page-wrapper {
-  position: absolute;
-  width: 100%;
-  min-height: 100%;
-  padding-top: 20px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.circle {
-  position: fixed;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 50px;
-  height: 50px;
-  margin: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(51, 51, 51, 1);
-  z-index: 500;
-
-  @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-.field {
-  padding-bottom: 5px;
 }

@@ -1,29 +1,34 @@
 $(document).ready(function() {
-	$('#side-bar-toggle').click(function() {
-		if ($('.side-bar').css('left') === '-300px') {
-			$('.side-bar').animate({'left': '0px'}, 200);
-		} else {
-			$('.side-bar').animate({'left': '-300px'}, 200);
-		}
-	});
 
-	$('.page-wrapper').click(function() {
-		if ($('.side-bar').css('left') === '0px') {
-			$('.side-bar').animate({'left': '-300px'}, 200);
-		}
-	});
+  var sb = $('.side-bar');
+  var sb_button = $('#side-bar-toggle');
+	var log_reg_swap = $('#log-in-register-swap');
+	var sb_log_in = $('.side-bar-log-in');
+	var sb_register = $('.side-bar-register');
 
-	$('.side-bar-register-button').click(function() {
-		if ($('.side-bar-register-button').text() === 'Register') {
-			$('.side-bar-register-button').text('Sign Up');
-			$('.register-question').text('Already a member?');
-			$('.side-bar-sign-in').animate({'height': '0px'}, 200);
-			$('.side-bar-register').animate({'height': '100%'}, 200);
+  sb_button.click(function() {
+    if (sb.css('right') === '-600px') {
+      sb.animate({'right': '0px'}, 200);
+    } else {
+      sb.animate({'right': '-600px'}, 200);
+    }
+  });
+
+  $('.page-wrapper').click(function() {
+    if (sb.css('right') === '0px') {
+      sb.animate({'right': '-600px'}, 200);
+    }
+  });
+
+	log_reg_swap.click(function() {
+		if (log_reg_swap.text() === 'Not a member yet?') {
+			log_reg_swap.text('Already a member?');
+			sb_log_in.animate({'height': '0px'}, 200);
+			sb_register.animate({'height': '100%'}, 200);
 		} else {
-			$('.side-bar-register-button').text('Register')
-			$('.register-question').text('Not a member yet?');
-			$('.side-bar-sign-in').animate({'height': '100%'}, 200);
-			$('.side-bar-register').animate({'height': '0px'}, 200);
+			log_reg_swap.text('Not a member yet?');
+			sb_register.animate({'height': '0px'}, 200);
+			sb_log_in.animate({'height': '100%'}, 200);
 		}
 	});
 });
