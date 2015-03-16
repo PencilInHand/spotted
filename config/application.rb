@@ -27,6 +27,6 @@ module Spotted
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**/}')]
 
     # Serving static assets for deployment.
-    config.serve_static_assets = true
+    config.serve_static_files = true
   end
 end
