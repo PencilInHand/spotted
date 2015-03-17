@@ -23,12 +23,14 @@ $(document).ready(function() {
 	log_reg_swap.click(function() {
 		if (log_reg_swap.text() === 'Not a member yet?') {
 			log_reg_swap.text('Already a member?');
-			sb_log_in.animate({'height': '0px'}, 200);
-			sb_register.animate({'height': '100%'}, 200);
+			sb_log_in.animate({'width': '0px'}, 300, function() {
+				sb_register.animate({'width': '50%'}, 300);
+			});
 		} else {
 			log_reg_swap.text('Not a member yet?');
-			sb_register.animate({'height': '0px'}, 200);
-			sb_log_in.animate({'height': '100%'}, 200);
+			sb_register.animate({'width': '0px'}, 300, function() {
+				sb_log_in.animate({'width': '50%'}, 300);
+			});
 		}
 	});
 });
