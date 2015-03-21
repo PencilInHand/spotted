@@ -6,17 +6,13 @@ default: &default
 development:
   <<: *default
   database: spotted_development
-  username: davidyurek
-  password:
 
 test:
   <<: *default
   database: spotted_test
-  username: davidyurek
-  password:
 
-# production:
-#   <<: *default
-#   database: spotted_production
-#   username: spotted
-#   password: <%= ENV['SPOTTED_DATABASE_PASSWORD'] %>
+production:
+   <<: *default
+   database: spotted_production
+   username: spotted
+   password: <%= ENV['SPOTTED_DATABASE_PASSWORD'] %>

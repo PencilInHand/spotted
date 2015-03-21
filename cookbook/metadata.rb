@@ -1,0 +1,18 @@
+name             'spotted'
+maintainer       'David Yurek'
+maintainer_email 'david.a.yurek@gmail.com'
+license          'MIT'
+description      'Installs/Configures spotted'
+long_description 'Installs/Configures spotted'
+version          '0.0.1'
+
+supports 'ubuntu'
+
+depends 'annoyances', '= 1.0.0'
+depends 'apt', '= 2.6.0'
+depends 'build-essential', '= 2.1.3'
+depends 'database', '= 2.2.0'
+depends 'git', '= 4.0.2'
+depends 'postgresql', '= 3.4.6'
+depends 'nodejs'
+depends 'sudo', '= 2.6.0'
