@@ -1,0 +1,25 @@
+{
+  "name": "spotted",
+  "version": "0.0.1",
+  "description": "An application that I will be developing with my friend. Dealing with personal car profiles, specifying modifications made to the car. See a car, scan the car, get everything that car owner wants to share about that car.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PencilInHand/spotted.git"
+  },
+  "author": "David Yurek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PencilInHand/spotted/issues"
+  },
+  "homepage": "https://github.com/PencilInHand/spotted",
+  "dependencies": {
+    "bower": "^1.3.12"
+  },
+  "scripts": {
+      "postinstall": "./node_modules/bower/bin/bower install"
+  }
+}
