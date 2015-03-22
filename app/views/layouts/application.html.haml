@@ -2,22 +2,12 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Spot My Car
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %title
+      - if content_for?(:title)
+        = yield(:title)
+        \-
+        Spotted
+    = stylesheet_link_tag    'application', media: 'all'
     = csrf_meta_tags
   %body
-    = render partial: 'layouts/side_bar'
-    .page-wrapper
-      .header
-        .col-xs-10
-          - if content_for?(:title)
-            = yield(:title)
-          - else
-            Spot My Car
-        .col-xs-2
-          %button.btn.fa.fa-bars#side-bar-toggle
-      .content
-        = render partial: 'layouts/notifications'
-        = yield
-      .footer
+    = javascript_include_tag 'application'
