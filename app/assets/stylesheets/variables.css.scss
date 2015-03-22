@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'OpenSans-Light';
-  src: url(font_path('open_sans/OpenSans-Light.ttf')) format('truetype');
+  src: font_url('open_sans/OpenSans-Light.ttf') format('truetype');
 }
 
 $dark-gray: rgba(51, 51, 51, 1);

@@ -1,6 +1,5 @@
-@import "compass";
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
 @import "variables";
+@import "font-awesome/scss/font-awesome";
+@import "materialize/sass/materialize";
+@import "font-face-overrides";
 @import "main";
