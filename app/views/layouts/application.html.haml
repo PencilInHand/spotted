@@ -14,7 +14,6 @@
     %header
       = render 'layouts/title_bar', user: current_user
       = render 'layouts/side_bar', user: current_user
-    .page
-      doi
+    .page{class: user_signed_in? ? 'signed-in' : 'signed-out'}
       = yield
     = javascript_include_tag 'application'

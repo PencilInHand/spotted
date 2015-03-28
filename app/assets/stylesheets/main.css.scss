@@ -9,17 +9,20 @@ body {
 }
 
 .page {
-  position: absolute;
   width: 100%;
   min-height: 100%;
-  top: 0;
-  padding-top: 64px;
+  padding-top: $mobile-title-bar-height;
   background-image: image_url('head-light.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100%;
+  z-index: 1;
 
-  .signed-out {
+  @media #{$medium-and-up} {
+    padding-top: $title-bar-height;
+  }
+
+  .signed-in {
     background-image: none;
   }
 }

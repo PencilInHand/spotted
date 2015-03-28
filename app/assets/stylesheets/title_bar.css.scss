@@ -1,9 +1,14 @@
 nav {
-  background-color: $transparent;
+  position: absolute;
+  background-color: #FFFFFF;
   color: $dark-gray;
   font-size: 1.2em;
-  line-height: $title-bar-height;
+  line-height: $mobile-title-bar-height;
   z-index: 500;
+
+  @media #{$medium-and-up} {
+    line-height: $title-bar-height;
+  }
 }
 
 nav a.button-collapse i.fa.fa-bars {
