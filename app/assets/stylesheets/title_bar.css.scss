@@ -1,0 +1,13 @@
+nav {
+  background-color: $transparent;
+  color: $dark-gray;
+  font-size: 1.2em;
+  line-height: $title-bar-height;
+  z-index: 500;
+}
+
+nav a.button-collapse i.fa.fa-bars {
+  font-size: 100%;
+  color: $dark-gray;
+  margin-right: 1em;
+}
