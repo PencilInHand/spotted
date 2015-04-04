@@ -11,6 +11,10 @@ nav {
   }
 }
 
+nav a {
+  color: $dark-gray;
+}
+
 nav a.button-collapse i.fa.fa-bars {
   font-size: 100%;
   color: $dark-gray;

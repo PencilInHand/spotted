@@ -11,12 +11,8 @@ body {
 .page {
   width: 100%;
   min-height: 100%;
-  padding-top: $mobile-title-bar-height;
-  background-image: image_url('head-light.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100%;
   z-index: 1;
+  padding-top: $mobile-title-bar-height;
 
   @media #{$medium-and-up} {
     padding-top: $title-bar-height;
@@ -25,4 +21,15 @@ body {
   .signed-in {
     background-image: none;
   }
+}
+
+.page.signed-out {
+  background-image: image_url('head-light.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.btn {
+  background-color: $dark-gray;
 }
