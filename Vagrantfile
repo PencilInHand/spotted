@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
     app.vm.box = 'ubuntu/trusty64'
 
     app.vm.provider 'virtualbox' do |v|
-      v.memory = 2048
+      v.memory = 4096
       v.name = 'spotted'
     end
 
