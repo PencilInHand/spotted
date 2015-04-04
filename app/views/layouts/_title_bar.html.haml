@@ -1,8 +1,8 @@
 %nav
   .container.row
-    .col.s5.left
+    .col.s9.l5.left
       = yield :title
-    .col.s5.right
+    .col.s2.l5.right
       %ul.right.hide-on-med-and-down
         - if user_signed_in?
           %li= link_to 'My Account', current_user, class: 'right'

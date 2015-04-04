@@ -1,2 +1,8 @@
-%ul.side-nav.right#slide-out
-  
+%ul.side-nav#slide-out
+  - if user_signed_in?
+    -# User profile links and information
+    %li= link_to 'My Account', current_user
+    %li= link_to 'Sign Out', destroy_user_session_path
+  - else
+    %li= link_to 'Sign In', new_user_session_path
+    %li= link_to 'Register', new_user_registration_path

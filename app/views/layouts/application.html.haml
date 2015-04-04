@@ -4,16 +4,13 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{content: 'width=device-width, initial-scale=1', name: 'viewport'}
     %title
-      - if content_for?(:title)
-        = yield(:title)
-        \-
-        Spotted
+      Spot My Car
     = stylesheet_link_tag    'application', media: 'all'
     = csrf_meta_tags
-  %body{class: user_signed_in? ? 'signed-in' : 'signed-out'}
+  %body
     %header
       = render 'layouts/title_bar', user: current_user
       = render 'layouts/side_bar', user: current_user
-    .page{class: user_signed_in? ? 'signed-in' : 'signed-out'}
+    .page.container{class: user_signed_in? ? 'signed-in' : 'signed-out'}
       = yield
     = javascript_include_tag 'application'
