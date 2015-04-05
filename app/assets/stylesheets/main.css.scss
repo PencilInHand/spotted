@@ -17,13 +17,9 @@ body {
   @media #{$medium-and-up} {
     padding-top: $title-bar-height;
   }
-
-  .signed-in {
-    background-image: none;
-  }
 }
 
-.page.signed-out {
+.page.splash {
   background-image: image_url('head-light.jpg');
   background-position: center center;
   background-repeat: no-repeat;
