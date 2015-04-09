@@ -1,5 +1,7 @@
 class VehiclesController < ApplicationController
   before_action :set_vehicle, only: [:show, :edit, :update, :destroy]
+  before_action :set_vehicles, only: [:index]
+  before_action :set_user
 
   # GET /vehicles
   # GET /vehicles.json
@@ -62,13 +64,20 @@ class VehiclesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_vehicle
       @vehicle = Vehicle.find(params[:id])
     end
 
+    def set_vehicles
+      @vehicles = Vehicle.where(user_id: params[:user_id])
+    end
+
+    def set_user
+      @user = User.find(params[:user_id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def vehicle_params
-      params[:vehicle]
+      params.require(:vehicle).permit(:user_id)
     end
 end
