@@ -6,7 +6,7 @@
       %ul.right.hide-on-med-and-down
         - if user_signed_in?
           %li= link_to 'My Account', current_user, class: 'right'
-          %li= link_to 'Sign Out', destroy_user_session_path, class: 'right', method: :delete
+          %li= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'right'
         - else
           %li= link_to 'Sign In', new_user_session_path, class: 'right'
           %li= link_to 'Register', new_user_registration_path, class: 'right'

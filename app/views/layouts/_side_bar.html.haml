@@ -2,7 +2,7 @@
   - if user_signed_in?
     -# User profile links and information
     %li= link_to 'My Account', current_user
-    %li= link_to 'Sign Out', destroy_user_session_path, method: :delete
+    %li= link_to 'Sign Out', destroy_user_session_url, method: :delete
   - else
     %li= link_to 'Sign In', new_user_session_path
     %li= link_to 'Register', new_user_registration_path
