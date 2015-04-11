@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery/dist/jquery.min
+//= require jquery-ujs/src/rails
 //= require materialize/dist/js/materialize.min
 //= require turbolinks
 //= require_tree .
