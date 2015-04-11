@@ -1,2 +1,6 @@
+- page_title do
+  #{link_to 'Spot My Car', root_path} / #{link_to "#{@user.name}", @user} / Vehicles
+
+
 = link_to 'New Vehicle', new_user_vehicle_path(user_id: @user.id)
 = render 'vehicles', vehicles: @vehicles
