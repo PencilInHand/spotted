@@ -2,12 +2,13 @@ nav {
   position: absolute;
   background-color: #FFFFFF;
   color: $dark-gray;
-  font-size: 1.2em;
+  font-size: 1rem;
   line-height: $mobile-title-bar-height;
   z-index: 500;
 
   @media #{$medium-and-up} {
     line-height: $title-bar-height;
+    font-size: 1.5rem;
   }
 }
 
@@ -16,7 +17,7 @@ nav a {
 }
 
 nav a.button-collapse i.fa.fa-bars {
-  font-size: 100%;
+  font-size: 1.2rem;
   color: $dark-gray;
   margin-right: 1em;
 }
