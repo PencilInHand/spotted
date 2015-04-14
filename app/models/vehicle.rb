@@ -4,5 +4,5 @@ class Vehicle < ActiveRecord::Base
   has_one :time_card
 
   validates :user, presence: true
-  validates :vin, presence: true, uniqueness: true
+  validates :vin, uniqueness: true
 end
