@@ -6,6 +6,10 @@ An application that I will be developing with my friend. Dealing with personal c
 
 ![Data Model](/public/data_model_first_pass.jpg "Data Model")
 
+## Edmunds API
+
+We will be using the Edmunds API for getting stock car information.
+
 # Phase 1
 
 Vehicle profiles. Upload a vehicle, add modifications to that vehicle, upload picture of the vehicle. Supports performance and aesthetic modifications.
