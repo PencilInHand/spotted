@@ -8,7 +8,7 @@ An application that I will be developing with my friend. Dealing with personal c
 
 ## Edmunds API
 
-We will be using the Edmunds API for getting stock car information.
+We will be using the [Edmunds][edmunds] API for getting stock car information.
 
 # Phase 1
 
@@ -21,3 +21,5 @@ IOS application for the car profile website. Search database of vehicles, displa
 # Phase 2
 
 NFC or RFID integration to link to vehicle profiles.
+
+[edmunds]: http://developer.edmunds.com/
