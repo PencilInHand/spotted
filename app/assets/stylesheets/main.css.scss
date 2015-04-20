@@ -4,6 +4,13 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  background-image: image_url('head-light.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 body {
   font-family: 'OpenSans-Light', sans-serif;
 }
@@ -23,11 +30,8 @@ body {
   margin-top: 30px;
 }
 
-.page.splash {
-  background-image: image_url('head-light.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+.page {
+  background-color: rgba(255, 255, 255, .6);
 }
 
 .btn {
