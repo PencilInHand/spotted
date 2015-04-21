@@ -3,6 +3,11 @@
   src: font_url('open_sans/OpenSans-Light.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: font_url('open_sans/OpenSans-Bold.ttf') format('truetype');
+}
+
 $mobile-title-bar-height: 56px;
 $title-bar-height: 64px;
 $transparent: rgba(255, 255, 255, 0);
