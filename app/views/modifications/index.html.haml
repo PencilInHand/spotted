@@ -1,0 +1,10 @@
+- page_title do
+  #{link_to 'Spot My Car', root_path} / #{link_to "#{@user.name}", @user} / #{link_to "#{@vehicle.name}", @vehicle} / Modifications
+
+- if @modifications.any?
+  = render 'modifications', modifications: @modifications, vehicle: @vehicle, user: @user
+- else
+  .row
+    .col.s4.offset-s4.center-align
+      %p{style: 'font-family: "OpenSans-Bold", sans-serif;'}
+        No vehicles! #{link_to 'Add one?', new_user_vehicle_path(user_id: @user.id)}
