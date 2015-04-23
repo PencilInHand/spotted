@@ -4,12 +4,13 @@ class ModificationsController < ApplicationController
   # GET /modifications
   # GET /modifications.json
   def index
-    @modifications = Modification.all
+    respond_with @modifications
   end
 
   # GET /modifications/1
   # GET /modifications/1.json
   def show
+    respond_with @modification
   end
 
   # GET /modifications/new
@@ -68,8 +69,20 @@ class ModificationsController < ApplicationController
     @modification = Modification.find(params[:id])
   end
 
+  def set_modifications
+    @modifications = Modifications.where(vehicle_id: params[:vehicle_id])
+  end
+
+  def set_vehicle
+    @vehicle = Vehicle.find(params[:vehicle_id])
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
   # Never trust parameters from the scary internet, only allow the white list through.
   def modification_params
-    params[:modification]
+    params.require(:vehicle).permit(:user_id, :vehicle_id)
   end
 end
