@@ -6,12 +6,13 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   # GET /vehicles.json
   def index
-    @vehicles = Vehicle.all
+    respond_with @vehicles
   end
 
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show
+    respond_with @vehicle
   end
 
   # GET /vehicles/new
