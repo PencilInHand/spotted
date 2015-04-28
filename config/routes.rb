@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-    resources :vehicles
+    resources :vehicles do
+      resources :modifications
+    end
     collection do
       get :me
     end
