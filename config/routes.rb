@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :vehicles do
       resources :modifications
+      resources :time_cards
     end
     collection do
       get :me
