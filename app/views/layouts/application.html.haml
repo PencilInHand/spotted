@@ -11,7 +11,7 @@
     %header
       = render 'layouts/title_bar', user: current_user
       = render 'layouts/side_bar', user: current_user
-    .page{class: current_page?(root_url) ? 'splash' : ''}
+    .page{class: current_page?(root_url)}
       .container
         = yield
     = javascript_include_tag 'application'
