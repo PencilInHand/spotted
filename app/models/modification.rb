@@ -1,5 +1,6 @@
 class Modification < ActiveRecord::Base
   belongs_to :vehicle
+  has_many :images
 
   validates :vehicles, presence: true
 
