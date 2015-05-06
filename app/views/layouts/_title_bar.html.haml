@@ -1,7 +1,8 @@
 %nav
   .container.row
-    .col.s9.l5.left.truncate
-      = yield :title
+    .col.s9.l7.left.truncate
+      %span.logo Spot My Car /
+      %span.breadcrumbs= yield :title
     .col.s2.l5.right
       %ul.right.hide-on-med-and-down
         - if user_signed_in?
