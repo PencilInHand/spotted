@@ -3,6 +3,8 @@ class VehiclesController < ApplicationController
   before_action :set_vehicles, only: [:index]
   before_action :set_user
 
+  respond_to :html, :json
+
   # GET /vehicles
   # GET /vehicles.json
   def index

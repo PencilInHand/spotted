@@ -1,6 +1,8 @@
 class ModificationsController < ApplicationController
   before_action :set_modification, only: [:show, :edit, :update, :destroy]
 
+  respond_to :html, :json
+
   # GET /modifications
   # GET /modifications.json
   def index

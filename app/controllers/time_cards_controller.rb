@@ -1,5 +1,7 @@
 class TimeCardsController < ApplicationController
   before_action :set_time_card, only: [:show, :edit, :update, :destroy]
+  
+  respond_to :html, :json
 
   # GET /time_cards
   # GET /time_cards.json
