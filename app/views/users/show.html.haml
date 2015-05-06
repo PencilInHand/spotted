@@ -1,5 +1,5 @@
 - page_title do
-  #{link_to 'Spot My Car', root_path} / #{@user.name.capitalize}
+  #{@user.name.capitalize}
 
 - if @user.vehicles.any?
   = render 'vehicles/vehicles', vehicles: @user.vehicles, user: @user
