@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: 'OpenSans-Italic';
+  src: font_url('open_sans/OpenSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'OpenSans-ExtraBold';
   src: font_url('open_sans/OpenSans-ExtraBold.ttf') format ('truetype');
 }
