@@ -56,6 +56,37 @@ $icons-font-path: "materialize/font/material-design-icons";
     font-weight: 700;
 }
 
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: font_url('open_sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: font_url('open_sans/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: font_url('open_sans/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans-Italic';
+  src: font_url('open_sans/OpenSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans-BoldItalic';
+  src: font_url('open_sans/OpenSans-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: font_url('open_sans/OpenSans-ExtraBold.ttf') format ('truetype');
+}
+
+
 // Font classes
 .os-regular-font {
   font-family: 'OpenSans-Regular';
