@@ -11,7 +11,6 @@ $icons-font-path: "materialize/font/material-design-icons";
     font_url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
     font_url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
     font_url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
-//  src: font_url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
   font-weight: normal;
   font-style: normal;
 }
