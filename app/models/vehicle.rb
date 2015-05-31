@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Vehicle < ActiveRecord::Base
   belongs_to :user
   has_many :modifications
@@ -7,7 +9,15 @@ class Vehicle < ActiveRecord::Base
   validates :user, presence: true
   validates :vin, uniqueness: true
 
-  def get_attributes_from_vin
-    # TODO(millidavids): Either here, or via javascript, get the attributes
+  before_create :attributes_from_vin
+
+  def attributes_from_vin
+    if vin
+      api_url = ENV['EDMUNDS_API_URL_BASE'] + ENV['EDMUNDS_FULL_DETAILS_BY_VIN_URL']
+      full_url = api_url + self.vin + '?fmt=json&api_key=' + ENV['EDMUNDS_API_KEY']
+      self.edmunds_json = JSON.load(open(full_url))
+    else
+      false
+    end
   end
 end
