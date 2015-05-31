@@ -17,7 +17,9 @@ class Vehicle < ActiveRecord::Base
       full_url = api_url + self.vin + '?fmt=json&api_key=' + ENV['EDMUNDS_API_KEY']
       self.edmunds_json = JSON.load(open(full_url))
     else
-      false
+      true
     end
+  rescue OpenURI::HTTPError
+    true
   end
 end

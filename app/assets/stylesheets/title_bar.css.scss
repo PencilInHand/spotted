@@ -16,9 +16,15 @@ nav a {
   color: $dark-gray;
 }
 
-nav a.button-collapse i.fa.fa-bars {
-  font-size: 1.2rem;
-  margin-right: 1em;
+
+nav a.button-collapse {
+  color: $dark-gray;
+
+  i.mdi-navigation-menu {
+    font-size: 1.2rem;
+    margin-right: 1em;
+    color: $dark-gray;
+  }
 }
 
 nav ul li a {
