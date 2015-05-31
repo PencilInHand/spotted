@@ -59,4 +59,6 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.5.0'
   # Faker
   gem 'faker', '~> 1.4.3'
+  # Dotenv
+  gem 'dotenv-rails', '~> 2.0.1'
 end
