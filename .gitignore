@@ -18,3 +18,7 @@
 node_modules/
 
 vendor/assets/components
+
+dotenv.development
+
+.env
