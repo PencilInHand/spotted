@@ -1,10 +1,4 @@
 - page_title do
   #{@user.name.capitalize}
 
-- if @user.vehicles.any?
-  = render 'vehicles/vehicles', vehicles: @user.vehicles, user: @user
-- else
-  .row
-    .col.s4.offset-s4.center-align
-      %p{style: 'font-family: "OpenSans-Bold", sans-serif;'}
-        No vehicles! #{link_to 'Add one?', new_user_vehicle_path(user_id: @user.id)}
+= render 'vehicles/vehicles', vehicles: @user.vehicles, user: @user
