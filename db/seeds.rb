@@ -12,6 +12,3 @@ alexs_speed_three = alex.vehicles.create!(vin: ENV['ALEXS_SPEED_THREE_VIN'])
 alexs_moms_highlander = alex.vehicles.create!(vin: ENV['ALEXS_MOMS_HIGHLANDER_VIN'])
 alexs_dads_silverado = alex.vehicles.create!(vin: ENV['ALEXS_DADS_SILVERADO_VIN'])
 alishas_focus = alisha.vehicles.create!(vin: ENV['ALISHAS_FOCUS_VIN'])
-
-puts '...adding aesthetic modifications...'
-alexs_dads_silverado.modifications.create!(type: 'AestheticModification', manufacturer: 'custom')
