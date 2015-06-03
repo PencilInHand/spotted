@@ -8,7 +8,7 @@
           .card-action
             = link_to user_vehicle_path(user_id: user.id, id: vehicle.id) do
               - if vehicle.edmunds_json
-                #{vehicle.edmunds_json['make']['name']} #{vehicle.edmunds_json['model']['name']}
+                #{vehicle.edmunds_json['make']['name'].capitalize} #{vehicle.edmunds_json['model']['name'].capitalize}
               - else
                 #{vehicle.vin}
 - else
