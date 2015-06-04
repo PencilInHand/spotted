@@ -1,0 +1,8 @@
+.row
+  .col.s6.offset-s6
+    %dl.dl-horizontal
+      %dt Make:
+      %dd= @vehicle.edmunds_json['make']['name'].capitalize
+      %dt Model:
+      %dd= @vehicle.edmunds_json['model']['name'].capitalize
+

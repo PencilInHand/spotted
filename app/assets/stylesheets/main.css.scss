@@ -40,3 +40,24 @@ body {
 .card a {
   color: $spot-purple;
 }
+
+dt {
+  font-family: 'OpenSans-Bold';
+  margin-right: 1em;
+}
+
+// @media (min-width: 768px) {
+// }
+.dl-horizontal dt {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  clear: left;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dl-horizontal dd {
+  margin-left: 50%;
+}
