@@ -1,9 +1,43 @@
 .row
   .col.s6
   .col.s6.offset-s6
-    %dl.dl-horizontal
-      %dt Make:
-      %dd= @vehicle.edmunds_json['make']['name'].capitalize
-      %dt Model:
-      %dd= @vehicle.edmunds_json['model']['name'].capitalize
+    - if @vehicle.edmunds_json
+      %dl.dl-horizontal
+        %dt Make:
+        %dd= @vehicle.edmunds_json['make']['name'].capitalize
+        %dt Model:
+        %dd= @vehicle.edmunds_json['model']['name'].capitalize
+      %hr
+      - if @vehicle.edmunds_json['engine']
+        %h5.os-bold-font.right Engine
+        %br
+        %dl.dl-horizontal
+          %dt Compression Ratio:
+          %dd= @vehicle.edmunds_json['engine']['compressionRatio']
+          %dt Cylinders:
+          %dd= @vehicle.edmunds_json['engine']['cylinder']
+          %dt Size:
+          %dd= @vehicle.edmunds_json['engine']['size']
+          %dt Displacement:
+          %dd= @vehicle.edmunds_json['engine']['displacement']
+          %dt Configuration:
+          %dd= @vehicle.edmunds_json['engine']['configuration'].capitalize
+          %dt Fuel Type:
+          %dd= @vehicle.edmunds_json['engine']['fuelType'].capitalize
+          %dt Horsepower:
+          %dd= @vehicle.edmunds_json['engine']['horsepower']
+          %dt Torque:
+          %dd= @vehicle.edmunds_json['engine']['torque']
+          %dt Total Valves:
+          %dd= @vehicle.edmunds_json['engine']['totalValves']
+          %dt Type:
+          %dd= @vehicle.edmunds_json['engine']['type'].capitalize
+          %dt RPM Horsepower:
+          %dd= @vehicle.edmunds_json['engine']['rpm']['horsepower']
+          %dt RPM Torque:
+          %dd= @vehicle.edmunds_json['engine']['rpm']['torque']
+          %dt Valve Timing:
+          %dd= @vehicle.edmunds_json['engine']['valve']['timing']
+          %dt Valve Gear:
+          %dd= @vehicle.edmunds_json['engine']['valve']['gear']
 
