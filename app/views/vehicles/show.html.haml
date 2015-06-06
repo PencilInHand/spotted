@@ -37,7 +37,7 @@
           %dt RPM Torque:
           %dd= @vehicle.edmunds_json['engine']['rpm']['torque']
           %dt Valve Timing:
-          %dd= @vehicle.edmunds_json['engine']['valve']['timing']
+          %dd= @vehicle.edmunds_json['engine']['valve']['timing'].capitalize
           %dt Valve Gear:
-          %dd= @vehicle.edmunds_json['engine']['valve']['gear']
+          %dd= @vehicle.edmunds_json['engine']['valve']['gear'].capitalize
 
