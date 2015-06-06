@@ -42,6 +42,9 @@ gem 'devise', '~> 3.4.1'
 gem 'unicorn'
 gem 'unicorn-rails'
 
+# AWS
+gem 'aws-sdk', '~> 2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
