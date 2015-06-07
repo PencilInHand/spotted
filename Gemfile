@@ -45,6 +45,9 @@ gem 'unicorn-rails'
 # AWS
 gem 'aws-sdk', '~> 2'
 
+# Sidekiq
+gem 'sidekiq', '~> 3.3.4'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
