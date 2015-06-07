@@ -21,6 +21,8 @@ include_recipe 'spotted::javascript_runtime'
 execute 'gem install bundler'
 execute 'gem install unicorn'
 
+package('redis-server').run_action(:install)
+
 include_recipe 'nodejs::nodejs_from_source'
 include_recipe 'nodejs::npm'
 nodejs_npm 'bower'
