@@ -5,6 +5,7 @@ class Vehicle < ActiveRecord::Base
   has_many :modifications
   has_many :images
   has_one :time_card
+  has_one :profile_image, class_name: 'Image'
 
   validates :user, presence: true
   validates :vin, uniqueness: true
