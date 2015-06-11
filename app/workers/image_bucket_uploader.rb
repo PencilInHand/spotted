@@ -4,6 +4,7 @@ class ImageBucketUploader
   def perform(image_id)
     image = Image.find_by_id(image_id)
     s3 = Aws::S3::Resource.new
+    
     case not nil
     when image.vehicle
       image_parent = "vehicle_#{image.vehicle.id}"
