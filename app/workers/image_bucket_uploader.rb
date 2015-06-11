@@ -15,6 +15,6 @@ class ImageBucketUploader
       raise ActiveRecord::RecordInvalid
     end
 
-    # Upload the image, will need to be passed the file a well.
+    # Upload the image, will need to be passed the file as well.
   end
 end
