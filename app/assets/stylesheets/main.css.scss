@@ -16,6 +16,7 @@ body {
 }
 
 .page {
+  position: relative;
   width: 100%;
   min-height: 100%;
   z-index: 1;
@@ -59,4 +60,20 @@ dt {
 
 .dl-horizontal dd {
   margin-left: 50%;
+}
+
+.splash-motto {
+  position: absolute;
+  bottom: 15%;
+  font-size: 120%;
+  font-style: 'OpenSans-Bold';
+
+  @media #{$medium-only} {
+    bottom: 15%;
+  }
+
+  @media #{$large-and-up} {
+    bottom: 10%;
+  }
+
 }
