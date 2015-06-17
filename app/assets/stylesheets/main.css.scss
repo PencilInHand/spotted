@@ -36,6 +36,10 @@ body {
 .btn {
   background-color: $dark-gray;
   margin: 5px;
+
+  &:hover {
+    background-color: $forcars-red;
+  }
 }
 
 .card a {
