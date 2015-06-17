@@ -1,11 +1,11 @@
-= form_for(new_user_vehicle_path(user_id: @user.id)) do |f|
-  - if @vehicle.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@vehicle.errors.count, "error")
-        prohibited this vehicle from being saved:
-      %ul
-        - @vehicle.errors.full_messages.each do |message|
-          %li= message
-  .actions
-    = f.submit
+.row
+  .col.s12
+    Use Edmunds to get car stock information.
+
+= form_for([user, vehicle], html: {role: 'form'}) do |f|
+  .form-group
+    = f.label :vin, 'VIN Number'
+    = f.text_field :vin, maxlength: MAX_FORM_STRING_LENGTH, class: 'form-control'
+  .form-group
+    = f.submit "Save", class: 'btn'
+    = link_to 'Cancel', user, class: 'btn red right'

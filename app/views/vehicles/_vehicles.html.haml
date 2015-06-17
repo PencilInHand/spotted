@@ -11,6 +11,11 @@
                 #{vehicle.edmunds_json['make']['name'].capitalize} #{vehicle.edmunds_json['model']['name'].capitalize}
               - else
                 #{vehicle.vin}
+  .row
+    .col.s12.m6.l4
+      %p{style: 'font-family: "OpenSans-Bold", sans-serif;'}
+        #{link_to 'Add vehicle', new_user_vehicle_path(user_id: user.id), class: 'btn'}
+
 - else
   .row
     .col.s4.offset-s4.center-align

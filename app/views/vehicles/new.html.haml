@@ -3,5 +3,4 @@
   #{link_to 'Vehicles', user_vehicles_path(user_id: @user)} /
   New
 
-= render 'form'
-= link_to 'Back', user_vehicles_path(user_id: @user.id), class: 'btn'
+= render 'form', vehicle: @vehicle, user: @user
