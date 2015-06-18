@@ -48,6 +48,9 @@ gem 'aws-sdk', '~> 2'
 # Sidekiq
 gem 'sidekiq', '~> 3.3.4'
 
+# CanCanCan
+gem 'cancancan', '~> 1.10'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
