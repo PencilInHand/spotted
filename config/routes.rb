@@ -6,6 +6,11 @@ Rails.application.routes.draw do
       resources :performance_modifications
       resources :aesthetic_modifications
       resources :time_cards
+      resources :images
+      
+      member do
+        get :gallery
+      end
     end
     collection do
       get :me

@@ -1,6 +1,7 @@
 class VehiclesController < ApplicationController
-  before_action :set_vehicle, only: [:show, :edit, :update, :destroy]
+  before_action :set_vehicle, only: [:show, :edit, :update, :destroy, :gallery]
   before_action :set_vehicles, only: [:index]
+  before_action :set_images, only: [:gallery]
   before_action :set_user
 
   respond_to :html, :json
@@ -69,6 +70,10 @@ class VehiclesController < ApplicationController
     end
   end
 
+  def gallery
+    respond_with @vehicle, @images
+  end
+
   private
     def set_vehicle
       @vehicle = Vehicle.find(params[:id])
@@ -80,6 +85,10 @@ class VehiclesController < ApplicationController
 
     def set_user
       @user = User.find(params[:user_id])
+    end
+
+    def set_images
+      @images = Image.where(vehicle_id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
