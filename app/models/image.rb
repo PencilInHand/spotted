@@ -8,6 +8,6 @@ class Image < ActiveRecord::Base
     images = arel_table
     vehicle_ids = vehicles.where(vehicles[:user_id].eq(user_id)).
                        project(vehicles[:id])
-    where(images[:vehicle_id].in(vehicles_ids))
+    where(images[:vehicle_id].in(vehicle_ids))
   }
 end
