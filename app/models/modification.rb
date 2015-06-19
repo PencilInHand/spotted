@@ -9,7 +9,7 @@ class Modification < ActiveRecord::Base
     modifications = arel_table
     vehicle_ids = vehicles.where(vehicles[:user_id].eq(user_id)).
                        project(vehicles[:id])
-    where(modifications[:vehicle_id].in(vehicles_ids))
+    where(modifications[:vehicle_id].in(vehicle_ids))
   }
 
   def initialize(args=nil)
