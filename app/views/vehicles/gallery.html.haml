@@ -1,4 +1,6 @@
 - if @images.any?
+  - @images.each do |image|
+    = image_tag image.url, class: 'materialbox'
 - else
   .row
     .col.s4.offset-s4.center-align
