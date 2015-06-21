@@ -70,4 +70,6 @@ group :development, :test do
   gem 'faker', '~> 1.4.3'
   # Dotenv
   gem 'dotenv-rails', '~> 2.0.1'
+  # Awesome Print
+  gem 'awesome_print', '~> 1.6.1'
 end
