@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619132449) do
+ActiveRecord::Schema.define(version: 20150623130249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20150619132449) do
     t.string   "sub_model"
     t.json     "edmunds_json"
     t.json     "custom_json"
+    t.string   "name"
   end
 
   add_index "vehicles", ["user_id"], name: "index_vehicles_on_user_id", using: :btree
