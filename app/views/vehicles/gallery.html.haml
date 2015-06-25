@@ -4,8 +4,10 @@
   Gallery
 
 - if @images.any?
-  - @images.each do |image|
-    = image_tag image.url, class: 'materialbox'
+  .row
+    - @images.each do |image|
+      .col.s12.m6.l4
+        = image_tag image.url, class: 'materialbox'
 - else
   .row
     .col.s4.offset-s4.center-align
