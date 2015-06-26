@@ -2,10 +2,11 @@
   .col.s12
     Use Edmunds to get car stock information.
 
-= form_for([user, vehicle], html: {role: 'form'}) do |f|
-  .form-group
-    = f.label :vin, 'VIN Number'
-    = f.text_field :vin, maxlength: MAX_FORM_STRING_LENGTH, class: 'form-control'
-  .form-group
-    = f.submit "Save", class: 'btn'
-    = link_to 'Cancel', user, class: 'btn red right'
+  .col.s12
+    = form_for([user, vehicle], html: {role: 'form'}) do |f|
+      .form-group
+        = f.label :vin, 'VIN Number'
+        = f.text_field :vin, maxlength: MAX_FORM_STRING_LENGTH, class: 'form-control'
+      .form-group
+        = f.submit "Save", class: 'btn'
+        = link_to 'Cancel', user, class: 'btn red right'
