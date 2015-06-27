@@ -1,6 +1,6 @@
 - page_title do
   #{link_to "#{@user.name}", @user} /
-  #{@vehicle.name ? @vehicle.name.capitalize : @vehicle.model.capitalize}
+  #{@vehicle.name ? '"' + @vehicle.name.titleize + '"' : @vehicle.model.capitalize}
 
 .row
   .col.s12.m4.l6
