@@ -5,7 +5,7 @@
 .row
   .col.s12.m4.l6
     = link_to 'Gallery', gallery_user_vehicle_path(user_id: @user.id, id: @vehicle.id)
-  .col.s12.m8.l6.offset-l6
+  .col.s12.m8.l6
     - if @vehicle.edmunds_json
       %dl.dl-horizontal
         %dt Make:
