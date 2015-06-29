@@ -9,6 +9,7 @@ class Vehicle < ActiveRecord::Base
 
   validates :user, presence: true
   validates :vin, uniqueness: true
+  validates :name, length: { maximum: MAX_FORM_STRING_LENGTH }
 
   before_create :attributes_from_vin
 
