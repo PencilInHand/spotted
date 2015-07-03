@@ -7,6 +7,11 @@
   .col.s12.m4.l6
     = link_to 'Gallery', gallery_user_vehicle_path(user_id: @user.id, id: @vehicle.id)
   .col.s12.m8.l6
+    - if current_user == @vehicle.user
+      = link_to edit_user_vehicle_path(user_id: @user.id, id: @vehicle.id), class: 'right' do
+        %i.mdi-action-settings
+        %span Edit Vehicle
+      %br/
     - if @vehicle.edmunds_json
       %dl.dl-horizontal
         %dt Make:
