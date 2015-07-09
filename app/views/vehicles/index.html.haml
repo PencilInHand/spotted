@@ -1,5 +1,6 @@
 - page_title do
   #{link_to "#{@user.name}", @user} / Vehicles
+  / May need to shrink these names, may want a method
 
 - if @vehicles.any?
   = render 'vehicles', vehicles: @vehicles, user: @user
