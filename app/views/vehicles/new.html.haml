@@ -2,5 +2,6 @@
   #{link_to "#{@user.name}", @user} /
   #{link_to 'Vehicles', user_vehicles_path(user_id: @user)} /
   New
+  / May need to shrink these paths
 
 = render 'form', vehicle: @vehicle, user: @user
