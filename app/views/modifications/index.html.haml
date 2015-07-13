@@ -1,5 +1,6 @@
 - page_title do
   #{link_to 'ForCars', root_path} / #{link_to "#{@user.name}", @user} / #{link_to "#{@vehicle.name}", @vehicle} / Modifications
+  / May need to shrink these names
 
 - if @modifications.any?
   = render 'modifications', modifications: @modifications, vehicle: @vehicle, user: @user
