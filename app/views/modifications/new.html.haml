@@ -1,0 +1,6 @@
+- page_title do
+  #{link_to "#{@user.name}", @user} /
+  #{@modification.vehicle.name ? '"' + @modification.vehicle.name.titleize + '"' : @modification.vehicle.model.titleize} /
+  #{@modification.type.titleize} /
+  New
+  / May need to shrink these names
