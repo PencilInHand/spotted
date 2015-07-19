@@ -28,8 +28,7 @@ class Vehicle < ActiveRecord::Base
     else
       true
     end
-  rescue OpenURI::HTTPError -> e
-    puts e.message
+  rescue OpenURI::HTTPError
     true
   end
 end
