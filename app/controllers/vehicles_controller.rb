@@ -70,6 +70,8 @@ class VehiclesController < ApplicationController
     end
   end
 
+  # GET /vehicle/1/gallery
+  # GET /vehicle/1/gallery.json
   def gallery
     respond_with @vehicle, @images
   end
