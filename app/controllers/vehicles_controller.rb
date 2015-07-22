@@ -77,6 +77,8 @@ class VehiclesController < ApplicationController
   end
 
   private
+
+    # Set vehicle
     def set_vehicle
       @vehicle = Vehicle.find(params[:id])
     end
