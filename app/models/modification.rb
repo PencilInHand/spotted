@@ -13,6 +13,7 @@ class Modification < ActiveRecord::Base
   }
 
   def initialize(args=nil)
+    # Abstract class for the two modifications that inherit this class.
     raise "Cannot directly instantiate an AbstractUser" if self.class == Modification
     super
   end
