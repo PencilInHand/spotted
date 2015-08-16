@@ -12,7 +12,7 @@ We will be using the [Edmunds][edmunds] API for getting stock car information.
 
 # Phase 1
 
-Vehicle profiles. Upload a vehicle, add modifications to that vehicle, upload picture of the vehicle. Supports performance and aesthetic modifications. Picture gallery for everything.
+Vehicle profiles. Upload a vehicle, add modifications to that vehicle, modifications change stock values of car specs, upload picture of the vehicle. Supports performance and aesthetic modifications. Picture gallery for everything.
 
 # Phase 1.1
 
