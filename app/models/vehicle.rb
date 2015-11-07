@@ -18,6 +18,7 @@ class Vehicle < ActiveRecord::Base
   }
 
   def attributes_from_vin
+    # may need a different api
     if vin
       api_url = ENV['EDMUNDS_API_URL_BASE'] + ENV['EDMUNDS_FULL_DETAILS_BY_VIN_URL']
       full_url = api_url + self.vin + '?fmt=json&api_key=' + ENV['EDMUNDS_API_KEY']
